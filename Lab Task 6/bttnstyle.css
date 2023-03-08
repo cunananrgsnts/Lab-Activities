@@ -1,0 +1,85 @@
+     body {
+        background-color: black;
+        
+      }
+      div {
+        display: inline-block;
+        margin: 40px;
+        background-color: white;
+        padding: .5rem;
+        
+      }
+
+      
+      #uber {
+        background-color: #000000; /* Green */
+        color: white;
+        padding: 11px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-style: none;
+      }
+
+      #Amazon {
+        background-color: rgb(255, 216, 20);
+        color: #000000;
+        padding: 11px 45px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px; font-family;
+        border-style: none; border-radius: 25px;
+      }
+
+      #GitHub{
+        background-color: rgb(46, 164, 79);
+        color: white;
+        padding: 11px 30px;
+        font-size: 16px; font-weight: bold;
+        border-style: none;
+        border-radius: 10px;
+        border-color: white;
+      }
+
+      #Boot{
+        margin-right: 5px;  
+        background-color: rgb(121, 82, 179);
+        color: white;
+        padding: 11px 30px;
+        font-weight: bold; font-size: 16px;
+        border-style: none;
+        border-radius: 5px;
+      }
+      #Strap {
+        margin-left: 5px;
+        background-color: white;
+        color: rgb(121, 82, 179);
+        padding: 11px 30px;
+        font-weight: bold; font-size: 16px;
+        border-style: solid;
+        border-color: rgb(121, 82, 179);
+        border-radius: 5px;
+      }
+
+      #Linked{
+          margin-right: 5px;
+          background-color: rgb(10, 102, 194);
+          color: white;
+          padding: 11px 30px;
+          border-style: none;
+          border-radius: 25px;
+          font-size: 16px;
+      }
+
+      #In{
+          margin-left: 5px;
+          background-color: rgb(255, 255, 255);
+          color: rgb(10, 102, 194);
+          padding: 11px 20px;
+          border-style: solid;
+          border-color: rgb(10, 102, 194);
+          border-radius: 25px;
+          font-size: 16px;
+      }
+      
