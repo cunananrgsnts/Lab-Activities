@@ -10,11 +10,12 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-        
-        body{
+
+        body {
             background-color: rgb(218, 236, 236);
             font-family: 'Poppins', sans-serif;
         }
+
         .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -90,10 +91,23 @@
             border-radius: 50%;
         }
 
-        h2{
-            font-weight: 600;
+        h2 {
+            font-weight: 500;
         }
-        
+
+        .flex {
+            display: flex;
+        }
+
+        .flex img {
+            margin-right: 10px;
+            display: block;
+        }
+
+        .flex h2,
+        .flex p {
+            margin: 0;
+        }
     </style>
 
 
@@ -110,7 +124,7 @@
                     <div>
                         <img class="icon" src="./images/image-daniel.jpg" alt="daniel clifford">
                     </div>
-                    
+
                     <div>
                         <h2 class="name1">Daniel Clifford</h2>
                         <p class="position">Verified Graduate</p>
@@ -143,6 +157,7 @@
                         <p class="position">Verified Graduate</p>
                     </div>
                 </div>
+
                 <h2>
                     The team was very supportive and kept me motivated
                 </h2>
@@ -217,7 +232,8 @@
             <article class="testimonial grid-col-span-2 flow bg-secondary-500 text-neutral-100">
                 <div class="flex">
                     <div>
-                        <img class="icon" class="border-primary-400" src="./images/image-patrick.jpg" alt="Patrick Abrams">
+                        <img class="icon" class="border-primary-400" src="./images/image-patrick.jpg"
+                            alt="Patrick Abrams">
                     </div>
                     <div>
                         <h2 class="name5">Patrick Abrams</h2>
