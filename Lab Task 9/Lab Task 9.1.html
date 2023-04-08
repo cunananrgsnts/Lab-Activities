@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9-1</title>
+
+
+    <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+        .main-container
+        {
+            display: flex;
+            margin-top: 10px;
+            font-family:P
+        }
+        #col1
+        {
+            background-color: lightblue;
+            width: 200px;
+        }
+        #col2
+        {
+            background-color: pink;
+            width: 75px;
+        }
+
+
+        #col3
+        {
+            background-color: skyblue;
+            width: 50px;
+        }
+       
+        #col4
+        {
+            background-color: pink;
+            flex: 1;
+
+
+        }
+
+
+        #col5
+        {
+            background-color: skyblue;
+            width: 75px;
+        }
+        .col6
+        {
+            background-color: pink;
+        }
+        .container1
+        {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .container2
+        {
+        display: flex;
+        border:1px solid gray;
+        align-items: center;
+        margin-top: 10px;
+        height: 50px;
+        justify-content: space-between;
+        display: flex;
+        }
+
+
+        #bar
+        {
+        background-color:#7454ac;
+        align-items: center;
+        display: flex;
+        margin-top: 50px;
+        height: 80px;
+        }
+
+
+        #home
+        {
+        background-color: transparent;
+        width: 100px;
+        padding: 10px;
+        border-color: transparent;
+        color: white;
+        font-size: 1.1rem;
+        }
+
+
+         #search
+        {
+        flex:1;
+        margin: 0 80px;
+        height: 30px;
+        border-radius: 70px;
+        border-color: transparent;
+        padding: 0 10px;
+        }
+
+
+        #download
+        {
+        border-color: white;
+        color: white;
+        width: 100px auto;
+        padding: 10px;
+        background-color: transparent;
+        font-size: 1.1rem;
+        margin: 0 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        cursor: pointer;
+        }
+
+
+        #notification
+        {
+        box-shadow:0px 0px 11px 1px #0000002f,
+        0px 0px 19px 14px #00000016;
+        border: 1px solid #fbfafa00;
+        border-radius: 20px;
+        padding: 20px;
+        margin-top: 10px;
+        }
+
+
+        .num
+        {
+        display: flex;
+        justify-content: space-between;
+        color: black;
+        }
+        .num1
+        {
+        background-color: #446cec;
+        color: white;
+        border-radius: 30px;
+        margin-bottom: 10px;
+        padding: 5px 20px;
+        }
+
+
+        #download:hover, #home:hover
+        {
+        color: aqua;
+        cursor: pointer;
+        transition: ease-in-out 0.5s;
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div id="col1">
+            200px
+        </div>
+        <div id="col2">
+            75px
+        </div>
+    </div>
+
+
+    <div class="main-container">
+        <div id="col3">
+            item1
+        </div>
+        <div id="col4">
+            item2
+        </div>
+        <div id="col5">
+            item3
+        </div>
+    </div>
+
+
+    <div class="container1">
+        <div class="col6">
+            item1
+        </div>
+        <div class="col6">
+            item2
+        </div>
+        <div class="col6">
+            item3
+        </div>
+        <div class="col6">
+            item4
+        </div>
+    </div>
+    <div class="container2">
+        <div class="col6">
+            item1
+        </div>
+        <div class="col6">
+            item2
+        </div>
+    </div>
+
+
+    <div id="bar">
+        <button id="home">
+            Home
+        </button>
+        <input id="search" type="text" placeholder="Search">
+        <button id="download" >
+            Download
+        </button>
+    </div>
+
+
+
+
+    <div id="notification">
+        <div class="num">
+            <div>
+                Home
+            </div>
+            <div class="num1">14</div>
+        </div>
+
+
+
+
+        <div  class="num">
+            <div>
+                Notification
+            </div>
+            <div class="num1">3</div>
+        </div>
+
+
+
+
+        <div  class="num">
+            <div>
+                Messages
+            </div>
+            <div class="num1">5</div>
+        </div>
+    </div>
+
+
+</body>
+</html>
+
