@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <title>Document</title>
+
+    <style>
+
+        *{
+            font-family: 'poppins';
+        }
+
+        body{
+            background-color: bisque;
+        }
+
+        #main-container{
+            display: flex;
+            justify-content: space-around;
+            width: 70%;
+            margin: auto;
+            flex-wrap: wrap;
+            
+        
+        }
+
+        #items-label{
+            display: flex;
+        }
+
+        #container{
+            text-align: left;
+            padding: 50px;;
+            color: black;
+            background-color: white;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            width: auto;
+            
+        }
+
+        .child-container{
+            display: flex;
+            justify-content:space-betweesn;
+            
+        }
+
+        #line{
+            width: 100%;
+            height: 3px;
+            background-color: gray;
+            opacity: .5;
+        }
+
+        #order-total-color{
+            color: rgb(185, 7, 7);
+        }
+
+        .label{
+            font-size: 2rem;
+        }
+
+        input{
+            width: 400px;
+            height: 100px;
+            border: 5px solid gray;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        button{
+            width: 70px;
+            height: 50px;
+            background-color: transparent;
+            color:  rgb(10, 102, 194);
+            border-radius: 10px;
+            border: 1px solid rgb(10, 102, 194);
+            font-weight: 1000;
+            font-size: xx-large;
+            cursor: pointer;
+            transition: ease-in-out.4s;
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+
+        button:hover{
+            background-color: black;
+            color: white;
+        }
+
+        #left-div{
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            padding: 30px;
+        }
+
+        .top-margin{
+            margin-top: 200px;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <div id="main-container">
+        <div id="left-div" class="top-margin">
+            <p class="label">Basketball Products: </p><input type="number" id="num" value="0"><br>
+            <button onclick="incre()">+</button>
+            <button onclick="decre()">-</button>
+            <p class="label">Shipping and Handling fee: </p><input type="number" id="num" value="4.99" readonly>
+        
+        </div>
+
+
+        <div class="top-margin">
+            <div id="container">
+                <h1>Order Summary</h1>
+                <!--  -->
+                <div class="child-container">
+                     <div id="items-label">
+                         <p>Items&nbsp;&#40;</p><p id="items"></p>
+                         <p>&#41;:</p>
+                     </div>
+         
+                     <p id="itemsPrice"></p>
+                </div>
+                <!--  -->
+                <div class="child-container">
+                     <p>Shipping & handling:</p>
+                     <p>$4.99</p>
+                </div>
+         
+                <!--  -->
+                <div class="child-container">
+                     <p>Total Before Tax:</p>
+                     <p id="total-before-tax"></p>
+                     
+                </div>
+         
+                <!--  -->
+                <div class="child-container">
+                     <p>Estimated tax &#40;10%&#41;:</p>
+                     <p id="estimated-tax"></p>
+                </div>
+         
+                <!--  -->
+                <div id="line"></div>
+         
+                <!--  -->
+                <div class="child-container" id="order-total-color">
+                    <h2>Order Total:</h2>
+                    <h2 id="order-total"></h2>
+                </div>
+                
+         
+            
+             </div>
+        </div>
+   
+    
+</div>
+
+
+
+
+    <script>
+
+        function incre(){
+
+            let Pnum = parseInt(document.getElementById("num").value);
+            let total = Pnum+1;
+            document.getElementById("num").value=total;
+            document.getElementById("items").innerHTML=total;
+
+            
+            let resItemsPrice=Math.round((total*15.97 )*100)/100;
+            document.getElementById("itemsPrice").innerHTML="$"+resItemsPrice;
+
+            let resTBT=Math.round((resItemsPrice+4.99)*100)/100;
+            document.getElementById("total-before-tax").innerHTML="$"+resTBT
+
+            let resET=Math.round((resTBT*.1)*100)/100;
+            document.getElementById("estimated-tax").innerHTML="$"+resET;
+
+            let resOT=Math.round((resTBT+resET)*100)/100;
+            document.getElementById("order-total").innerHTML="$"+resOT;
+
+
+
+        }
+
+        function decre(){
+
+            let Pnum = parseInt(document.getElementById("num").value);
+
+            if(Pnum>=1){
+            let total = Pnum-1;
+            document.getElementById("num").value=total;
+            document.getElementById("items").innerHTML=total;
+
+            
+            let resItemsPrice=Math.round((total*15.97 )*100)/100;
+            document.getElementById("itemsPrice").innerHTML="$"+resItemsPrice;
+
+            let resTBT=Math.round((resItemsPrice+4.99)*100)/100;
+            document.getElementById("total-before-tax").innerHTML="$"+resTBT
+
+            let resET=Math.round((resTBT*.1)*100)/100;
+            document.getElementById("estimated-tax").innerHTML="$"+resET;
+
+            let resOT=Math.round((resTBT+resET)*100)/100;
+            document.getElementById("order-total").innerHTML="$"+resOT;
+
+           
+
+            }
+            else{
+                alert("You can't lower the quantity anymore.");
+            }
+            
+        }  
+
+
+      
+
+      
+
+        
+
+        
+        
+       
+    </script>
+
+
+    
+</body>
+</html>

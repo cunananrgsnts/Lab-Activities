@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Finals Task 1</title>
+    <script src="assets/main.js"></script>
+    <style>
+       input {
+        background: white;
+        color: black;
+      }
+      body {
+        text-align: center;
+        background-color: white;
+      }
+      #main-container{
+        background-color: burlywood;
+        margin-left: 350px;
+        margin-right: 350px;
+        margin-top: 50px;
+        border-radius: 20px;
+        font-size: 20px;
+        border: 3px solid black;
+      }
+      #circle{
+        border-radius: 10px;
+        font-size: 20px;
+        background-color: wheat;
+      }
+      #container1{
+        background-color: white;
+        margin: 10px;
+        border-radius: 10px;
+        padding-bottom: 10px;
+        border: 1px solid black;
+      }
+     
+    </style>
+  </head>
+  <body>
+    <div id="main-container"> <h2 text-align="center">Calculator</h2>
+      <div id="container1">
+    <br />
+    <b>First Number: </b>
+    <input type="number" name="one" id="firstnum" /><br />
+    <br />
+    <b>Second Number: </b>
+    <input type="number" name="two" id="secondnum" /><br />
+    <br />
+    <b>Result: </b>
+    <input type="number" name="three" id="res"disabled/><br /><br />
+
+
+
+
+    <input id="circle" type="button" name="b1" value="Addition" onclick="add()" />
+    <input id="circle" type="button" name="b2" value="Substraction" onclick="sub()" />
+    <input id="circle" type="button" name="b3" value="Multiplication" onclick="mul()" />
+    <input id="circle" type="button" name="b4" value="Division" onclick="div()" />
+    <input id="circle" type="button" name="b5" value="Clear" onclick="cleared()" />
+   
+    <button id="circle" onclick="about()">About</button>
+  </div>
+  </div>
+
+  </body>
+</html>
